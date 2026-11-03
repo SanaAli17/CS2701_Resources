@@ -1,0 +1,164 @@
+body{
+    font-family: "Lato", sans-serif;
+    max-width: 75rem;
+    margin: auto;
+    height: 100vh;
+}
+
+header{
+    background-image:url(SharingFood.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    height:200px;
+    width: 100%;
+    margin: auto;
+}
+
+/**** Menu Style *****************************************/
+nav {
+    border-bottom: 1px solid black;
+}
+
+ul.navlist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.navlist li
+{
+    float: left;
+    display: inline;
+}
+
+ul.navlist li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navlist li a:hover {
+    background-color: #111;
+}
+
+/**** Styling for main part */
+
+main {
+    border-bottom: 0.5rem solid;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 400px;
+}
+
+section, aside {
+    padding: 0.5rem;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+aside {
+    width: 25%;
+    background-color: #dededb;
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+section {
+    width: 75%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form.center {
+    width: 60%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form.center input[type="text"],
+form.center input[type="email"],
+form.center input[type="password"] {
+    width: 160px;
+    box-sizing: border-box;
+}
+
+/*Styling for search in aside*/
+.search{
+    display: block;
+    width: auto;
+    text-align: left;
+}
+
+.center {
+    border: 3px solid green;
+    padding: 10px;
+    width: 60%;
+    max-width: 450px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Styling for text inputs in the form*/
+.textInput {
+    display: block;
+    width: auto;
+    text-align: left;
+}
+
+/*Styling with a media query*/
+@media screen and (max-width: 700px) {
+    /* ToDo: Style aside and section so that they take 100% width on small screens*/
+    aside {
+         width: 100%;
+    
+    }
+
+    main{
+         flex-direction: column;
+    }
+    
+    section {
+         width: 100%;
+ 
+    }
+
+    #hiddenSection{
+        overflow-wrap: break-word;
+        min-height: 12px;
+        padding: 0;
+}
+
+}
+
+/* Accessibility improvements */
+
+/* Show keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid blue;
+    outline-offset: 2px;
+}
+
+/* Make form inputs responsive */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+/* Allow page to grow when needed */
+body {
+    min-height: 100vh;
+    height: auto;
+}
+
